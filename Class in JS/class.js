@@ -29,11 +29,12 @@ class VehicleCl{
         this.wheels=wheels;
     }
 
-    //3.Methods 
-        getDetails=function(){
+    //3.Methods this method came outside so that it is accesible to every object but every object does not contain this function
+    getDetails(){
         console.log(`The Vehicle is ${this.name} and color is ${this.color} ,it has ${this.wheels} wheels.`)
     }
 }
 
 const veh1=new VehicleCl('Bike','blue',2)
-console.log(veh1)  //OP VehicleCl {name: 'Bike', color: 'blue', wheels: 2, getDetails: ƒ}
+console.log(veh1)
+//OP:VehicleCl { name: 'Bike', color: 'blue', wheels: 2 }
