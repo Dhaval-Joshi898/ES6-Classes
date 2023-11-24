@@ -42,16 +42,17 @@
 
 
 
-//This will give UNDEFINED 
-// class Student{
-//     name;
-//     sec;
-//     #rollno;
-//     constructor(name,sec,rollno){
-//         this.name=name;
-//         this.sec=sec;
-//         this.rollno=rollno;
-//     }
-// }
-// let stu=new Student('dj','b','14')
-// console.log(stu)
+// This will give UNDEFINED 
+class Student{
+    name;
+    sec;
+    #rollno;
+    constructor(name,sec,rollno){
+        this.name=name;
+        this.sec=sec;
+        this.rollno=rollno;
+        
+    }
+}
+let stu=new Student('dj','b','14')
+console.log(stu.rollno)
