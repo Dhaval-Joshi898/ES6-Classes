@@ -46,13 +46,32 @@
 class Student{
     name;
     sec;
-    #rollno;
+    #rollno;   // This is a private field
     constructor(name,sec,rollno){
         this.name=name;
         this.sec=sec;
-        this.rollno=rollno;
+        this.#rollno=rollno;  // Assigning the private field
         
     }
 }
 let stu=new Student('dj','b','14')
-console.log(stu.rollno)
+console.log(stu.rollno) // This will result in an error because rollno is a private field
+
+
+//to access the roll no ,you would need to define a method within the class that returns its value or manipulates it
+class Student1{
+    name;
+    sec;
+    #rollno;   // This is a private field
+    constructor(name,sec,rollno){
+        this.name=name;
+        this.sec=sec;
+        this.#rollno=rollno;  // Assigning the private field
+        
+    }
+    getDetails() {
+        return`${this.#rollno} from the function inside class`
+    }
+}
+let stud=new Student1('dj','b','14')
+console.log(stud.getDetails()) // This will result in an error because rollno is a private field
